@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarifs - Salon Élégance</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #d4a373;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #d4a373;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 2px;
+      background-color: #d4a373;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #a8643d;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .tarifs {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #f8f3ef;
+    }
+
+    .tarifs h2 {
+      color: #a8643d;
+      margin-bottom: 40px;
+      font-size: 2em;
+    }
+
+    .tarif-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .tarif-item {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tarif-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .tarif-item h3 {
+      color: #d4a373;
+      margin-bottom: 10px;
+    }
+
+    .tarif-item p {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nos Tarifs</h1>
+    <p>Des prestations pour tous les styles</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="#">Services</a>
+    <a href="tarifs.html">Tarifs</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="tarifs">
+    <h2>Tarifs du Salon</h2>
+    <div class="tarif-grid">
+      <div class="tarif-item">
+        <h3>Coupe Homme</h3>
+        <p>10€</p>
+      </div>
+      <div class="tarif-item">
+        <h3>Coupe Femme</h3>
+        <p>30€</p>
+      </div>
+      <div class="tarif-item">
+        <h3>Taille de Barbe</h3>
+        <p>5€</p>
+      </div>
+      <div class="tarif-item">
+        <h3>Forfait Complet</h3>
+        <p>35€</p>
+      </div>
+      <div class="tarif-item">
+        <h3>Coloration</h3>
+        <p>35€</p>
+      </div>
+      <div class="tarif-item">
+        <h3>Soin Capillaire</h3>
+        <p>25€</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Salon Élégance - Tous droits réservés</p>
+  </footer>
+
+</body>
+</html>

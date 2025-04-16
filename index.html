@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salon Élégance</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #d4a373;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+
+    @keyframes slideDown {
+      0% { transform: translateY(-100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #d4a373;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 2px;
+      background-color: #d4a373;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #a8643d;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      background-image: url('https://m.media-amazon.com/images/I/819K+AyCYTL.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 0 10px #000;
+      font-size: 2em;
+      text-align: center;
+      transition: transform 0.5s ease;
+    }
+
+    .hero:hover {
+      transform: scale(1.05);
+    }
+
+    .content {
+      padding: 60px 20px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeIn 1s forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gallery {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .gallery h2 {
+      margin-bottom: 30px;
+      color: #a8643d;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    .lamalice {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Salon Élégance</h1>
+    <p>Beauté & style sur rendez-vous</p>
+  </header>
+
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#">Services</a>
+    <a href="tarifs.html">Tarifs</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h2>Révélez votre beauté naturelle</h2>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>Bienvenue chez Salon Élégance</h2>
+    <p>Notre équipe vous accueille pour sublimer vos cheveux.</p>
+    <p>Coupe, coloration, soins capillaires – tout est là pour vous plaire.</p>
+  </section>
+
+  <section class="gallery">
+      <h2>Nos réalisations barber</h2>
+    <div class="lamalice">
+        <div class="gallery-grid">
+            <img src="https://i.ebayimg.com/images/g/~LYAAOSwCUdjWHjd/s-l1600.webp" alt="Barber 1" />
+      </div>
+      <div class="gallery-grid">
+          <img src="https://i0.wp.com/www.lecoinbarber.fr/wp-content/uploads/2024/08/JRL-7-1.png?w=400&ssl=1" alt="Barber 1" />
+      </div>
+      <div class="gallery-grid">
+          <img src="https://media.s-bol.com/Jk3ZjEG1V49D/v2JlZW0/524x840.jpg" alt="Barber 1" />
+      </div>
+    </div>
+</section>
